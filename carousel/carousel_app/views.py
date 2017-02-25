@@ -1,4 +1,4 @@
-from models import Carousel
+from .models import Carousel
 from rest_framework import viewsets
 from .serializers import CarouselSerializer
 

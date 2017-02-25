@@ -22,6 +22,7 @@ router = routers.DefaultRouter()
 router.register(r'carousel', CarouselViewSet)
 
 urlpatterns = [
-    url(r'^', include(routers.urls)),
+    url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
 ]
+
