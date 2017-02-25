@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from models import Carousel
+from rest_framework import viewsets
+from .serializers import CarouselSerializer
 
-# Create your views here.
+
+class CarouselViewSet(viewsets.ModelViewSet):
+    queryset = Carousel.objects.all().order_by('date_created')
+    serializer_class = CarouselSerializer
+
