@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'carousel_app',
     'rest_framework',
+    'carousel_app',
 ]
 
 MIDDLEWARE = [
