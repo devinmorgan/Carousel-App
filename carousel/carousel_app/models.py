@@ -22,8 +22,7 @@ class Image(models.Model):
 
     # data fields for Image object
     name = models.CharField(max_length=100)
-    # carousel_position_index = models.IntegerField(default=-1)
-    # image_url = models.CharField(max_length=300)
+    image_url = models.CharField(max_length=300)
     created = models.DateTimeField(auto_now=True)
 
 

@@ -12,4 +12,4 @@ class ImageList(generics.ListAPIView):
 
     def get_queryset(self):
         carousel_name = self.kwargs['carousel_name']
-        return Image.objects.filter(carousel__name=carousel_name).order_by('carousel_position_index')
+        return Image.objects.filter(carousel__name=carousel_name)
