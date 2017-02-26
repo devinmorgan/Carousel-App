@@ -3,7 +3,7 @@ from .models import Carousel, Image
 from django.core.exceptions import ValidationError
 import re
 
-class ImageForm(forms.ModelForm):
+class ImageAdminForm(forms.ModelForm):
 
     class Meta:
         model = Image
@@ -30,7 +30,7 @@ class ImageForm(forms.ModelForm):
             return self.cleaned_data['carousel_position_index']
 
 
-class CarouselForm(forms.ModelForm):
+class CarouselAdminForm(forms.ModelForm):
 
     class Meta:
         model = Carousel
