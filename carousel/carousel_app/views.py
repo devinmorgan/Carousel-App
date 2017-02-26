@@ -4,6 +4,6 @@ from .serializers import CarouselSerializer
 
 
 class CarouselViewSet(viewsets.ModelViewSet):
-    queryset = Carousel.objects.all().order_by('date_created')
+    queryset = Carousel.objects.all().order_by('created')
     serializer_class = CarouselSerializer
 
