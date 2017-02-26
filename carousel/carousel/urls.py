@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
-from carousel_app.views import CarouselViewSet
+from carousel_app.views import ImageList, CarouselViewSet
 
 router = routers.DefaultRouter()
 router.register(r'carousel', CarouselViewSet)
 
 urlpatterns = [
+    url('^images/(?P<carousel_name>.+)/$', ImageList.as_view()),
     url(r'^', include(router.urls)),
     url(r'^admin/', admin.site.urls),
 ]
