@@ -8,7 +8,7 @@ class Carousel(models.Model):
     date_created = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "Carousel: %s" % self.name
+        return "%s" % self.name
 
 class Image(models.Model):
     name = models.CharField(max_length=100)
@@ -18,4 +18,4 @@ class Image(models.Model):
     date_created = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "Image: %s" %self.name
+        return "%s" %self.name
