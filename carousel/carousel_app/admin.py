@@ -1,5 +1,14 @@
 from django.contrib import admin
 from .models import Carousel, Image
+from .forms import CarouselForm, ImageForm
 
-admin.site.register(Carousel)
-admin.site.register(Image)
+
+class CarouselAdmin(admin.ModelAdmin):
+    form = CarouselForm
+
+class ImageAdmin(admin.ModelAdmin):
+    form = ImageForm
+
+admin.site.register(Carousel, CarouselAdmin)
+admin.site.register(Image, ImageAdmin)
+

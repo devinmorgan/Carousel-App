@@ -1,9 +1,8 @@
 from django.db import models
-
 from django.db import models
 
 class Carousel(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     image_time_interval = models.IntegerField(default=-1)
     created = models.DateTimeField(auto_now=True)
 
