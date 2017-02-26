@@ -4,7 +4,7 @@ from django.db import models
 
 class Carousel(models.Model):
     name = models.CharField(max_length=100)
-    image_count = models.IntegerField()
+    auto_advance_timer = models.IntegerField(default=-1)
     date_created = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -13,7 +13,7 @@ class Carousel(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=100)
     carousel = models.ForeignKey(Carousel, related_name="pictures")
-    carousel_order_index = models.IntegerField()
+    carousel_position_index = models.IntegerField(default=-1)
     image_url = models.CharField(max_length=300)
     date_created = models.DateTimeField(auto_now=True)
 
