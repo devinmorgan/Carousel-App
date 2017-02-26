@@ -22,8 +22,10 @@ router = routers.DefaultRouter()
 router.register(r'carousel', CarouselViewSet)
 
 urlpatterns = [
-    url('^images/(?P<carousel_name>.+)/$', ImageList.as_view()),
-    url(r'^', include(router.urls)),
+    # url to get the images for the named carousel
+    url('^carousel/(?P<carousel_name>.+)/$', ImageList.as_view()),
+
+    # url for the admin page, where images are added to carousels
     url(r'^admin/', admin.site.urls),
 ]
 
