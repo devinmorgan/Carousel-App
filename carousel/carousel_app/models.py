@@ -14,7 +14,7 @@ class Image(models.Model):
     name = models.CharField(max_length=100)
     carousel = models.ForeignKey(
         Carousel,
-        related_name="images",
+        related_name="carousel",
         on_delete=models.CASCADE
     )
     carousel_position_index = models.IntegerField(default=-1)
